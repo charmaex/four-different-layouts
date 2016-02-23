@@ -8,15 +8,25 @@
 
 import UIKit
 
+extension UIView {
+    
+    func toggleHidden() {
+        hidden = false == hidden
+    }
+    
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var nestedStackView: UIStackView!
-    @IBOutlet weak var iPadOnlyView: UIView!
+    @IBOutlet weak var defaultView: UIView!
+    @IBOutlet weak var secondView: UIView!
+    @IBOutlet var toggleButtons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        secondView.hidden = true
     }
     
     override func viewDidLayoutSubviews() {
@@ -24,11 +34,20 @@ class ViewController: UIViewController {
         
         changeSVOrientation()
     }
+    
+    @IBAction func toggleViews() {
+        defaultView.toggleHidden()
+        secondView.toggleHidden()
+    }
 
     func changeSVOrientation() {
         if traitCollection.verticalSizeClass == .Regular && traitCollection.horizontalSizeClass == .Regular {
             
-            iPadOnlyView.hidden = false
+            secondView.hidden = false
+            
+            for button in toggleButtons {
+                button.hidden = true
+            }
             
             let orientation:UIInterfaceOrientation = UIApplication.sharedApplication().statusBarOrientation;
             if orientation == UIInterfaceOrientation.LandscapeLeft || orientation == UIInterfaceOrientation.LandscapeRight {
