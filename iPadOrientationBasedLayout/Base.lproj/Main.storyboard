@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -147,8 +147,8 @@
                         <outlet property="nestedStackView" destination="va2-6w-INh" id="lEr-RU-Ixd"/>
                         <outlet property="secondView" destination="Xlh-Hf-Fhc" id="GZW-Sf-goi"/>
                         <outlet property="stackView" destination="OLl-Vv-mrA" id="Tvh-Gp-Voi"/>
-                        <outletCollection property="toggleButtons" destination="Ja1-zf-M3C" id="IDQ-0r-mCX"/>
-                        <outletCollection property="toggleButtons" destination="cus-o9-CXl" id="hmS-xh-SDM"/>
+                        <outletCollection property="toggleButtons" destination="Ja1-zf-M3C" collectionClass="NSMutableArray" id="IDQ-0r-mCX"/>
+                        <outletCollection property="toggleButtons" destination="cus-o9-CXl" collectionClass="NSMutableArray" id="hmS-xh-SDM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
